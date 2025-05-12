@@ -1,18 +1,24 @@
-from graphics import Window, Point, Line
+from graphics import Window, Point, Line, Cell
 from tkinter import Tk
 
 def main():
     win = Window(800, 600)
-    p1 = Point(36, 55)
-    p2 = Point(54, 234)
-    p3 = Point(234, 235)
-    l1 = Line(p1, p2)
-    l2 = Line(p3, p2)
-    l3 = Line(p1, p3)
-    win.draw_line(l2, fill_color="red")
-    win.draw_line(l3, fill_color="pink")
+    c = Cell(win)
+    c.has_left_wall = False
+    c.draw(50, 50, 100, 100)
 
-    win.draw_line(l1, fill_color="black")
+    c = Cell(win)
+    c.has_right_wall = False
+    c.draw(125, 125, 200, 200)
+
+    c = Cell(win)
+    c.has_bottom_wall = False
+    c.draw(225, 225, 250, 250)
+
+    c = Cell(win)
+    c.has_top_wall = False
+    c.draw(300, 300, 500, 500)
+
     win.wait_for_close()
 
 main()
