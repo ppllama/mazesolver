@@ -31,7 +31,7 @@ def main():
 
     # c3.draw_move(c4, True)
 
-    m1 = Maze(x1=50, y1=70, num_rows=80, num_cols=80, cell_size_x=10, cell_size_y=10, win=win, seed=10, speed=0)
+    m1 = Maze(x1=50, y1=70, num_rows=80, num_cols=80, cell_size_x=10, cell_size_y=10, win=win, speed=0)
     m1._break_entrance_and_exit()
     m1._break_walls_r(0,0)
     m1.solve()
